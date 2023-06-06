@@ -10,6 +10,8 @@ if(isset($_REQUEST['save']))
     setcookie("username",$_REQUEST['username'],time()+3600);
     setcookie("email",$_REQUEST['email'],time()+3600);
     setcookie("password",$_REQUEST['password'],time()+3600);
+    header("location:login.php");//it will redirect you to other page
+
 }
 
 ?>
