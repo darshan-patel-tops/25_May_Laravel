@@ -35,3 +35,9 @@ print_r("Welcome ".$_SESSION['UserInformation'][0] . " And Your Password is". $_
 
 
 <h1>Home Page</h1>
+
+<!-- CRUD -->
+<!-- 1 create
+2 read
+3 update
+4 delete -->

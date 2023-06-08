@@ -1,6 +1,8 @@
 <?php
 require_once('header.php');
 echo "<pre>";
+// print_r($_SESSION);
+
 if (isset($_REQUEST['add'])) 
 {
     print_r($_REQUEST);
