@@ -45,6 +45,10 @@ array("adnan"=>
 array("sports"=>60,"music"=>33)
 )));
 
+
+foreach ($multiarr as $key => $value) {
+    echo "$key is and $value is";
+}
 echo "<pre>";
 print_r($multiarr);
 echo $multiarr["DPS"]["11th_Standard"]["adnan"]["music"];
