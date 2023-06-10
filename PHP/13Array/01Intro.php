@@ -44,7 +44,8 @@ array("parth"=>array("sports"=>35,"music"=>45),
 array("adnan"=>
 array("sports"=>60,"music"=>33)
 )));
-
+echo"<br>";
+print_r(array_column($multiarr,'10th_Standard'));
 
 foreach ($multiarr as $key => $value) {
     echo "$key is and $value is";
