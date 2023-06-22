@@ -2,7 +2,7 @@
 
 
 $username = "mohammed";
-$password = "m@acg@692";
+$password = "Sighkw@47sgh9";
 echo "<br>";
 echo $username;
 echo "<br>";
@@ -10,7 +10,7 @@ echo $password;
 echo "<br>";
 echo "<br>";
 
-echo md5($password); // it is a one way encryption
+echo md5($password); // it is a one way encryption you cannot decrypt
 echo "<br>";
 // echo md5($enc);
 
@@ -23,6 +23,6 @@ echo base64_decode("bW9oYW1tZWQ=");
 echo "<br>";
 echo base64_encode($password);
 echo "<br>";
-echo base64_decode("bUBhY2dANjky");
+echo base64_decode("U2lnaGt3QDQ3c2doOQ==");
 
 ?>
