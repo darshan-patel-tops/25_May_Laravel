@@ -4,7 +4,7 @@ $string = "This is a demo demo string and it can hold alpha numerice value and y
 
 echo "String True";
  echo "<br>";
- echo stristr($string,"demo",true);
+ echo stristr($string,"string",true);
  echo "<br>";
  echo stristr($string,"demo");
  
