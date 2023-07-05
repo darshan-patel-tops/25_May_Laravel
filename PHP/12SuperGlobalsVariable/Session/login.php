@@ -1,6 +1,9 @@
 <?php
 require_once('header.php');
-
+if (isset($_SESSION['UserInformation'])) {
+    header("location:index.php");
+    exit(); // Stop further execution
+}
 echo "<pre>";
 print_r($_COOKIE);   
 if(isset($_REQUEST['save']))
