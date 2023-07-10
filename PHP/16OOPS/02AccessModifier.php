@@ -2,8 +2,8 @@
 
 
 // public           public is like water
-// private          private is like juice
-// protected        protected is like expensive black water
+// protected        protected is like juice
+// private          private is like black water
 
 
 
