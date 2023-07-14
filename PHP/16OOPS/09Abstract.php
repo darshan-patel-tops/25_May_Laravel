@@ -4,11 +4,8 @@
 
 abstract class abstractclass
 {
-    abstract function complusory()
-    {
-        
-    }
-    function functionname()
+    abstract function pleaseusethis();
+    public function functionname()
     {
         echo "Called function<br>";
     }
@@ -18,14 +15,21 @@ abstract class abstractclass
 
 class inherited extends abstractclass
 {
+    public function pleaseusethis()
+    {
+        echo "okay";
+    }
     function calling()
     {
         echo "calling <br>";
     }
 }
 
-$object = new inehrited;
+$object = new inherited;
+
+$object->pleaseusethis();
 
 
 
+//when abstract method is declared you must have to use that in your child class or inherited class
 ?>

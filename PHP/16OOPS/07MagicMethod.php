@@ -1,10 +1,10 @@
 <!-- 
 __construct(),
 __destruct(),
-__call(),
 __callStatic(),
 __get(),
 __set(),
+__call(),
 __isset(),
 __unset(),
 __sleep(),
