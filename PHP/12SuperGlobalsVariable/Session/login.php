@@ -17,7 +17,7 @@ if(isset($_REQUEST['save']))
     }
     else
     {
-        echo "try again";
+        echo "try again or inavalid username or password";
     }
 }
 echo "</pre>";

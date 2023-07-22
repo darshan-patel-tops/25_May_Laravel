@@ -5,7 +5,7 @@ require_once('header.php');
 if(isset($_REQUEST['save']))
 {
     echo "<pre>";
-    // print_r($_REQUEST);
+    print_r($_REQUEST);
     echo "</pre>";
     setcookie("username",$_REQUEST['username'],time()+3600);
     setcookie("email",$_REQUEST['email'],time()+3600);
