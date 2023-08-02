@@ -46,7 +46,7 @@ class model
 }
 
 
-$object = new model;
-$object->select();
+// $object = new model;
+// $object->select();
 
 ?>
