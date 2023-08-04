@@ -19,6 +19,7 @@ class controller extends model
             echo " </pre>";
             switch($_SERVER['PATH_INFO'])
             {
+
                 case '/home':
                     require_once("view/header.php");
                     require_once("view/index.php");
@@ -38,6 +39,17 @@ class controller extends model
                     require_once("view/footer.php");
                     break;
 
+                case '/register':
+
+                    if(isset($_REQUEST["reg_button"]))
+                    {
+                        // echo "<pre>";
+                        // print_r($_REQUEST);
+                        // echo "</pre>";
+                        $this->register();
+                    }
+                    require_once("view/register.php");
+                    break;
 
             }
 

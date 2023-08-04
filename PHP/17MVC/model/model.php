@@ -19,6 +19,16 @@ class model
         
     }
 
+
+    public function register()
+    {
+        echo "<pre>";
+        print_r($_REQUEST);
+        echo "</pre>";
+    }
+
+
+
     public function select()
     {
         echo "<br>";
