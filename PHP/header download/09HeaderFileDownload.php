@@ -51,6 +51,7 @@ if (file_exists($file_path)) {
 <body>
     <form method="post">
         <input type="submit" value="Download" name="Download" id="Download">
+        <a href="downloadfile.zip" download> Hello</a>
     </form>
 </body>
 
