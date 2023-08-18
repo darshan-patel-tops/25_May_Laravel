@@ -4,6 +4,8 @@ require_once("model/model.php");
 
 class controller extends model
 {
+    public $userurl = "http://localhost/Batches/25_May_Laravel/PHP/17MVC/assets/";
+    public $adminurl = "http://localhost/Batches/25_May_Laravel/PHP/17MVC/assets/admins";
 
     public function __construct()
     {
@@ -24,6 +26,11 @@ class controller extends model
                     require_once("view/header.php");
                     require_once("view/index.php");
                     require_once("view/footer.php");
+                    break;
+                case '/admin-dashboard':
+                    require_once("view/admin/header.php");
+                    // require_once("view/index.php");
+                    require_once("view/admin/footer.php");
                     break;
 
                 case '/contact':

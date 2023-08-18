@@ -9,14 +9,14 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="<?php echo $this->userurl; ?>/css/animate.css">
 	
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="<?php echo $this->userurl; ?>/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?php echo $this->userurl; ?>/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?php echo $this->userurl; ?>/css/magnific-popup.css">
 	
-	<link rel="stylesheet" href="assets/css/flaticon.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="<?php echo $this->userurl; ?>/css/flaticon.css">
+	<link rel="stylesheet" href="<?php echo $this->userurl; ?>/css/style.css">
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	
