@@ -28,8 +28,38 @@ class model
     }
 
 
+    public function select($table)
+    {
+        // echo "<pre>";
+        $sql = "SELECT * from $table";
+        // echo $sql;
 
-    public function select()
+        $sqlex = $this->connection->query($sql);
+        // print_r($sqlex);
+
+        if($sqlex->num_rows>0)
+        {
+            while($fetch = $sqlex->fetch_object())
+            {
+                $fetchdata[] = $fetch;
+            }
+            $response["code"] = "1";
+            $response["status"] = "success";
+            $response["data"] = $fetchdata;
+        }
+        else
+        {
+            $response["code"] = "0";
+            $response["status"] = "Fail";
+            $response["data"] = 0;
+
+        }
+        // print_r($response);
+        return $response;
+        // exit;
+    }
+
+    public function selectusers()
     {
         echo "<br>";
         $sql = "select * from users";

@@ -32,6 +32,15 @@ class controller extends model
                     // require_once("view/index.php");
                     require_once("view/admin/footer.php");
                     break;
+                case '/admin/user':
+
+                    $response = $this->select("users");
+                    require_once("view/admin/header.php");
+                    require_once("view/admin/allusers.php");
+                    // require_once("view/index.php");
+                    echo "User Page";
+                    require_once("view/admin/footer.php");
+                    break;
 
                 case '/contact':
                     require_once("view/header.php");
