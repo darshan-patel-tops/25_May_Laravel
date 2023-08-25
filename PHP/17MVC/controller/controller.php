@@ -35,9 +35,14 @@ class controller extends model
                 case '/admin/user':
 
                     $response = $this->select("users");
-                    require_once("view/admin/header.php");
-                    require_once("view/admin/allusers.php");
-                    // require_once("view/index.php");
+                    if(isset($_REQUEST['delete_btn']))
+                    {
+                            $this->delete($_REQUEST['delete_btn'],"users");
+                        }
+                        require_once("view/admin/header.php");
+                        require_once("view/admin/allusers.php");
+                        // require_once("view/index.php");
+                        // print_r($_REQUEST);
                     echo "User Page";
                     require_once("view/admin/footer.php");
                     break;
@@ -55,6 +60,17 @@ class controller extends model
                     require_once("view/footer.php");
                     break;
 
+                case '/login':
+
+                    echo "<pre>";
+                    // print_r($_REQUEST);
+                    echo "</pre>";
+                    $data = $_REQUEST;
+                    $this->login($data);
+                    require_once("view/login.php");
+                    break;
+
+
                 case '/register':
 
                     if(isset($_REQUEST["reg_button"]))
@@ -62,7 +78,8 @@ class controller extends model
                         // echo "<pre>";
                         // print_r($_REQUEST);
                         // echo "</pre>";
-                        $this->register();
+                        $data = $_REQUEST;
+                        $this->register($data);
                     }
                     require_once("view/register.php");
                     break;

@@ -4,12 +4,16 @@
 <body>
     
     <div class="main">
-        <form class="main__form" method="post">     
+        <form class="main__form" method="post" action="">     
 
             <div class="main__form__inputs">
                 <h3>Register</h3>
                 <div>
                     <input type="email" placeholder="   EMAIL" class="email" required id="input1" name="email">
+                    <span id="span1"></span>
+                </div>
+                <div>
+                    <input type="text" placeholder="   MOBILE" class="email" required id="input1" name="mobile">
                     <span id="span1"></span>
                 </div>
                 <div>

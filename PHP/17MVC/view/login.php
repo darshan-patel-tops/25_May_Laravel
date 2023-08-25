@@ -4,16 +4,16 @@
 <body>
     
     <div class="main">
-        <form class="main__form">     
+        <form class="main__form" method="post" action="">     
 
             <div class="main__form__inputs">
                 <h3>LOGIN</h3>
                 <div>
-                    <input type="email" placeholder="   EMAIL" class="email" required id="input1">
+                    <input type="text" placeholder="   USERNAME" class="email" required id="input1" name="username">
                     <span id="span1"></span>
                 </div>
                 <div>
-                    <input type="password" placeholder="  PASSWORD" required id="input2">
+                    <input type="password" placeholder="  PASSWORD" required id="input2" name="password">
                     <i class="fa-solid fa-eye" id="eye-icon"></i>
                     <span id="span2"></span>
                 </div>
@@ -24,7 +24,7 @@
                 <a href="" class="main__form__buttons__btn1 button" id="register">
                     <span>REGISTER</span>
                 </a>
-                <button class="main__form__buttons__btn2 button">
+                <button class="main__form__buttons__btn2 button" type="submit">
                     <span>SIGN IN</span>
                 </button>
             </div>

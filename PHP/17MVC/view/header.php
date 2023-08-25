@@ -37,6 +37,8 @@
 					<li class="nav-item"><a href="projects" class="nav-link"><span>Projects</span></a></li>
 					<li class="nav-item"><a href="blog" class="nav-link"><span>Blog</span></a></li>
 					<li class="nav-item"><a href="contact" class="nav-link"><span>Contact</span></a></li>
+					<li class="nav-item"><a href="register" class="nav-link"><span>Register</span></a></li>
+					<li class="nav-item"><a href="login" class="nav-link"><span>Login</span></a></li>
 				</ul>
 			</div>
 		</div>
