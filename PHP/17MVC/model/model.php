@@ -19,6 +19,79 @@ class model
         
     }
 
+
+
+    public function selectwhere($table,$where="")
+    {
+        $sql = "Select * from $table";
+
+        if($where != "")
+        {
+            $sql .= " WHERE";
+            foreach($where as $key => $value)
+            {
+                $sql .= " $key  = $value AND";
+
+            }
+            $sql = rtrim($sql,"AND");
+        }
+        // echo $sql;
+        // exit;
+
+        $sqlex = $this->connection->query($sql);
+
+        if($sqlex->num_rows>0)
+        {
+            while($fetchdata = $sqlex->fetch_object())
+            {
+                $data[] = $fetchdata;
+            }
+
+            return $response["data"] = $data;
+        }
+        else
+        {
+            echo "no data found";
+        }
+    }
+
+
+    public function update($table,$data,$id)
+    {
+        $sql = "UPDATE $table SET";
+            foreach($data as $key => $value)
+            {
+                $sql .= " $key = '$value',";
+            }
+            // echo $sql;
+            $sql = rtrim($sql,",");
+            
+            $sql .= " WHERE ";
+            foreach($id as $key => $value)
+            {
+                $sql .= " $key = $value AND";
+            }
+            $sql = rtrim($sql,"AND");
+            // echo $sql;
+            
+            $sqlex = $this->connection->query($sql);
+            if($sqlex > 0)
+            {
+                $response["code"] = "1";
+                $response["message"] = "success";
+                $response["data"] = "1";
+
+            }
+            else
+            {
+                $response["code"] = "0";
+                $response["message"] = "Try Again";
+                $response["data"] = "0";
+            }
+            return $response;
+
+    }
+
     public function login($data)
     {
         // print_r($data);

@@ -46,7 +46,46 @@ class controller extends model
                     echo "User Page";
                     require_once("view/admin/footer.php");
                     break;
+                
+                    case '/admin/update':
+                        print_r($_REQUEST);
+                        if(isset($_POST["update_btn"]))
+                        {
+                            echo "inside if";
+                            $data = array(
+                               "username" => $_REQUEST["username"],
+                               "email" => $_REQUEST["email"],
+                               "mobile" => $_REQUEST["mobile"],
+                                "password" => $_REQUEST["password"],
+                            );
 
+                            $res = $this->update('users',$data,array("id"=>$_REQUEST['id']));
+
+                            if($res["code"]=="1")
+                            {
+                                header("location:user");
+                            }
+                            else
+                            {
+                                echo "<script> alert('Error while inserting some data try again!!!!!')   </script>";
+                            }
+                        }
+
+                        break;
+                case '/admin/update-user':
+                        // print_r($_REQUEST);
+                        if(isset($_REQUEST['id']))
+                        {
+                                $data = $this->selectwhere("users",$_REQUEST);
+                        }
+                        // print_r($data);
+                        // exit;
+                        require_once("view/admin/header.php");
+                        require_once("view/admin/edituser.php");
+                        require_once("view/admin/footer.php");
+
+                    break;
+                        
                 case '/contact':
                     require_once("view/header.php");
                     require_once("view/contact.php");

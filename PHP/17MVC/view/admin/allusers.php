@@ -48,10 +48,10 @@
     <td><?php echo $user->role;?></td>
     <td>
 
-    <form action="" method="post">
+    <form action="update-user" method="post">
             
-        <a href="">
-            <button class="btn btn-sm btn-success" >Update</button>
+        <a href="update-user">
+            <button class="btn btn-sm btn-success" name="id" value="<?php echo $user->id; ?>" >Update</button>
         </a>
     
     </form>
