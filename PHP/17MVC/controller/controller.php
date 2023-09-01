@@ -53,9 +53,9 @@ class controller extends model
                         {
                             echo "inside if";
                             $data = array(
-                               "username" => $_REQUEST["username"],
-                               "email" => $_REQUEST["email"],
-                               "mobile" => $_REQUEST["mobile"],
+                                "username" => $_REQUEST["username"],
+                                "email" => $_REQUEST["email"],
+                                "mobile" => $_REQUEST["mobile"],
                                 "password" => $_REQUEST["password"],
                             );
 
