@@ -35,6 +35,7 @@ class controller extends model
                 case '/admin/user':
 
                     $response = $this->select("users");
+                    // $response = $this->select("products");
                     if(isset($_REQUEST['delete_btn']))
                     {
                             $this->delete($_REQUEST['delete_btn'],"users");
@@ -51,12 +52,22 @@ class controller extends model
                         print_r($_REQUEST);
                         if(isset($_POST["update_btn"]))
                         {
+                            if($_FILES['image']['error'] ==0)
+                            {
+                                $image =  time().$_FILES['image']['name'];
+                                move_uploaded_file($_FILES['image']['tmp_name'],"upload/$image");
+                            }
+                            else
+                            {
+                                $image = $_REQUEST['image_old'];
+                            }
                             echo "inside if";
                             $data = array(
                                 "username" => $_REQUEST["username"],
                                 "email" => $_REQUEST["email"],
                                 "mobile" => $_REQUEST["mobile"],
                                 "password" => $_REQUEST["password"],
+                                "image"=> $image
                             );
 
                             $res = $this->update('users',$data,array("id"=>$_REQUEST['id']));
@@ -77,6 +88,7 @@ class controller extends model
                         if(isset($_REQUEST['id']))
                         {
                                 $data = $this->selectwhere("users",$_REQUEST);
+                                // $data = $this->selectwhere("products",$_REQUEST);
                         }
                         // print_r($data);
                         // exit;

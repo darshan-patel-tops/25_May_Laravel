@@ -12,7 +12,6 @@ echo "</pre>";
             <!-- Content -->
 
             <div class="container-xl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Horizontal Layouts</h4>
 
               <!-- Basic Layout & Basic with Icons -->
               <div class="row">
@@ -25,7 +24,7 @@ echo "</pre>";
                     </div>
                     <div class="card-body">
                         
-                      <form method="post" enctype="multipart/form-data" action="update">
+                      <form method="post" enctype="multipart/form-data" action="update" >
                       
                         <input type="hidden" name="id" value="<?php echo $data[0]->id ?> ">
                         <div class="row mb-3">
@@ -46,6 +45,22 @@ echo "</pre>";
                             <input type="text" class="form-control" id="mobile" name="mobile" value="<?php echo $data[0]->mobile ?>">
                           </div>
                         </div>
+                        
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="image">image</label>
+                          <div class="col-sm-10">
+                            <input type="file" class="form-control" id="image" name="image" >
+                          </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                          <div class="col-sm-10">
+                            <img src="../upload/<?php echo $data[0]->image ?>" alt="no image found" height="100px" width="200px">
+                            <input type="hidden" class="form-control" id="image_old" name="image_old" value="<?php echo $data[0]->image ?>" >
+                          <!-- <input type="file" class="form-control" id="image" name="image"> -->
+                          </div>
+                        </div>
+
                         
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="password">password</label>
