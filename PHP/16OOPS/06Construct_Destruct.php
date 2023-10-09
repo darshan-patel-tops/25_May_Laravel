@@ -25,6 +25,11 @@ class marriage
 
 $marriage = new marriage;
 $marriage->shadi();
+$marriage->shadi();
+$marriage->shadi();
+$marriage->shadi();
+$marriage->shadi();
+$marriage->shadi();
 
 //Construct is invoked by default when created
 //construct never return anything
